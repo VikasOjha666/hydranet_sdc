@@ -18,7 +18,7 @@ sio=socketio.Server()
 app=Flask(__name__)
 speed_limit=5
 model_steer=load_model('SDCModifiedTrue.h5')
-#model_thr=load_model('SDCThrottle.h5')
+
 
 if os.path.exists('imgs') is False:
     os.mkdir('imgs')

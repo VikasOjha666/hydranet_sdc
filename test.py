@@ -14,7 +14,6 @@ sio=socketio.Server()
 app=Flask(__name__)
 speed_limit=5
 model_steer=load_model('SDCsteer2.h5')
-#model_thr=load_model('SDCThrottle.h5')
 
 
 
@@ -37,8 +36,6 @@ def telemetry(sid,data):
 
     steering_angle=float(model_steer.predict(image))
  
-    
-    #throttle=float(model_thr.predict(image))
     throttle=1.0-speed/speed_limit
     print('{} {} {}'.format(steering_angle,throttle,speed))
 

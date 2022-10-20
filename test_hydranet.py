@@ -9,12 +9,11 @@ from PIL import Image
 import cv2
 import os
 os.environ['TF_CPP_MIN_LOG_LEVEL']='2'
-#os.environ['CUDA_VISIBLE_DEVICES'] = '-1'
 sio=socketio.Server()
 app=Flask(__name__)
 speed_limit=5
 hydranet=load_model('hydranet.h5')
-#model_thr=load_model('SDCThrottle.h5')
+
 
 
 
